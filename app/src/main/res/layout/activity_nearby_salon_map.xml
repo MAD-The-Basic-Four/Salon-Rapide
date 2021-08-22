@@ -31,7 +31,7 @@
             android:layout_below="@+id/txtSalons"
             android:background="@color/baPrimaryDark"
             android:fontFamily="sans-serif-black"
-            android:text="@string/disover_new_salons_around_town"
+            android:text="@string/discover_new_salons_around_town"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold" />
