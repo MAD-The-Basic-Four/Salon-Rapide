@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dev.salonrapide">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -9,17 +19,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonRapide">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".adminSalonManagement"
+            android:exported="true" />
+        <activity
+            android:name=".adminHomepage"
+            android:exported="true" />
+        <activity
+            android:name=".adminLogin"
+            android:exported="true" />
+        <activity
+            android:name=".AddDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".salonRapideBranches"
+            android:exported="true" />
+        <activity
+            android:name=".noteDetails"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".editNotes"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".createNotes"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".forgotPassword"
+            android:exported="true" />
         <activity
             android:name=".addNotes"
-            android:exported="true" />
-        <activity
-            android:name=".nearbySalonMap"
-            android:exported="true" />
-        <activity
-            android:name=".viewAppointments"
-            android:exported="true" />
-        <activity
-            android:name=".bookAppointments"
             android:exported="true" />
         <activity
             android:name=".userProfile"

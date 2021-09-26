@@ -20,75 +20,75 @@ import com.google.firebase.auth.FirebaseUser;
 
 import org.w3c.dom.Text;
 
-public class loginPage extends AppCompatActivity {
+public class adminLogin extends AppCompatActivity {
 
-    private EditText mloginEmail, mloginPassword;
-    private RelativeLayout mlogin,mgoToSignUp;
+    private EditText madminLoginEmail, madminLoginPassword;
+    private RelativeLayout madminLogin,mgoToSignUp;
     private TextView mgoToForgotPassword;
-    private TextView mgoToAdminLogin;
+    private TextView mgoToLoginPage;
 
     private FirebaseAuth firebaseAuth;
 
-    ProgressBar mprogressbarofloginpage;
+    ProgressBar mprogressbarofadminloginpage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_admin_login);
 
-      //getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
-        mloginEmail = findViewById(R.id.loginEmail);
-        mloginPassword = findViewById(R.id.loginPassword);
-        mlogin = findViewById(R.id.login);
+        madminLoginEmail = findViewById(R.id.adminLoginEmail);
+        madminLoginPassword = findViewById(R.id.adminLoginPassword);
+        madminLogin = findViewById(R.id.adminLogin);
         mgoToSignUp = findViewById(R.id.goToSignUp);
         mgoToForgotPassword = findViewById(R.id.goToForgotPassword);
-        mprogressbarofloginpage = findViewById(R.id.progressbarofloginpage);
-        mgoToAdminLogin = findViewById(R.id.goToAdminLogin);
+        mprogressbarofadminloginpage = findViewById(R.id.progressbarofadminloginpage);
+        mgoToLoginPage = findViewById(R.id.goToLoginPage);
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser =firebaseAuth.getCurrentUser();
 
         if(firebaseUser!=null){
             finish();
-            startActivity(new Intent(loginPage.this, homepage.class));
+            startActivity(new Intent(adminLogin.this, adminHomepage.class));
         }
 
-       mgoToSignUp.setOnClickListener(new View.OnClickListener() {
+        mgoToSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(loginPage.this, signUp.class));
+                startActivity(new Intent(adminLogin.this, signUp.class));
             }
         });
 
-        mgoToAdminLogin.setOnClickListener(new View.OnClickListener() {
+        mgoToLoginPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(loginPage.this, adminLogin.class));
+                startActivity(new Intent(adminLogin.this, loginPage.class));
             }
         });
 
-       mgoToForgotPassword.setOnClickListener(new View.OnClickListener() {
+        mgoToForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(loginPage.this, forgotPassword.class));
+                startActivity(new Intent(adminLogin.this, forgotPassword.class));
 
             }
         });
 
-        mlogin.setOnClickListener(new View.OnClickListener() {
+        madminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String mail = mloginEmail.getText().toString().trim();
-                String password = mloginPassword.getText().toString().trim();
+                String mail = madminLoginEmail.getText().toString().trim();
+                String password = madminLoginPassword.getText().toString().trim();
 
                 if(mail.isEmpty() || password.isEmpty()){
                     Toast.makeText(getApplicationContext(),"All fields are required", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    //Login the user
+                    //Login the admin
 
-                    mprogressbarofloginpage.setVisibility(View.VISIBLE);
+                    mprogressbarofadminloginpage.setVisibility(View.VISIBLE);
 
                     firebaseAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -99,7 +99,7 @@ public class loginPage extends AppCompatActivity {
                             }
                             else{
                                 Toast.makeText(getApplicationContext(),"Account doesnt exist!", Toast.LENGTH_SHORT).show();
-                                mprogressbarofloginpage.setVisibility(View.INVISIBLE);
+                                mprogressbarofadminloginpage.setVisibility(View.INVISIBLE);
                             }
                         }
                     });
@@ -114,10 +114,10 @@ public class loginPage extends AppCompatActivity {
         if(firebaseUser.isEmailVerified()==true){
             Toast.makeText(getApplicationContext(),"Logged in", Toast.LENGTH_SHORT).show();
             finish();
-            startActivity(new Intent(loginPage.this, homepage.class));
+            startActivity(new Intent(adminLogin.this, adminHomepage.class));
         }
         else{
-            mprogressbarofloginpage.setVisibility(View.INVISIBLE);
+            mprogressbarofadminloginpage.setVisibility(View.INVISIBLE);
             Toast.makeText(getApplicationContext(),"Verify your email first!", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();
         }

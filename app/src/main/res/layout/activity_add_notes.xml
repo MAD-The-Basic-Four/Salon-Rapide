@@ -3,23 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".homepage"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
 
     <RelativeLayout
         android:id="@+id/rl1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:padding="30dp"
-        android:background="@drawable/notesimg">
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:background="@drawable/notesimg"
+        android:padding="30dp">
 
         <TextView
             android:id="@+id/txtSalons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
             android:background="@color/baPrimary"
             android:text="@string/notes"
             android:textColor="@color/white"
@@ -30,6 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtSalons"
+            android:layout_alignStart="@+id/txtSalons"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
             android:background="@color/baPrimaryDark"
             android:fontFamily="sans-serif-black"
             android:text="@string/sticky_notes_only_non_stick"
@@ -37,53 +46,34 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:elevation="3dp"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/userprofile"
-            android:contentDescription="@string/user_profile_img" />
-
-        <Button
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            tools:ignore="SpeakableTextPresentCheck" />
-
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="223dp"
-        android:text="@string/view_existing_notes" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_gravity="bottom|end"
+        android:id="@+id/createnotesfab"
+        android:src="@drawable/ic_baseline_add_24"
+        android:background="@color/baPrimary"
+        app:maxImageSize="40dp">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/rl1"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:layout_marginBottom="295dp"
-        android:text="@string/create_new_note" />
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:scrollbars="vertical">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignTop="@+id/button3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
-        android:layout_marginBottom="155dp"
-        android:text="@string/delete_notes" />
-
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

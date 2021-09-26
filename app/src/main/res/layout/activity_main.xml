@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tint"
@@ -9,56 +9,71 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:layout_below="@id/imageView3"
         android:id="@+id/imageView"
-        android:layout_width="275dp"
-        android:layout_height="152dp"
-        android:layout_marginBottom="356dp"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
         android:contentDescription="@string/salonRapideLogo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/beardIMG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/beard"
         app:tint="@color/white" />
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="267dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="150dp"
-        android:background="@color/black"
-        android:text="@string/login"
-        android:textColor="@color/white"
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="125dp">
 
-        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.94" />
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/black"
+            android:onClick="loginBtn"
+            android:text="@string/login"
+            android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/signUpButton"
-        android:layout_width="267dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="156dp"
-        android:layout_marginEnd="150dp"
-        android:text="@string/signUp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.456" />
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlLogin">
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:onClick="signUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/black"
+            android:text="@string/sign_up"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

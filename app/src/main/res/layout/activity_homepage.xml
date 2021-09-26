@@ -13,24 +13,15 @@
         android:padding="30dp">
 
         <TextView
-            android:id="@+id/txthello"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            tools:ignore="RelativeOverlap" />
+            android:text="@string/hello_there"
+            android:textColor="@color/baPrimaryDark"
+            android:layout_marginTop="5dp"
+            android:textSize="42sp"
+            android:textStyle="bold">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txthello"
-            android:fontFamily="sans-serif-black"
-            android:text="@string/abdul_rahuman"
-            android:textColor="@color/black"
-            android:textSize="26sp"
-            android:textStyle="bold" />
+        </TextView>
 
         <ImageView
             android:elevation="3dp"
@@ -38,75 +29,10 @@
             android:layout_height="70dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/userprofile"
-            android:contentDescription="@string/user_profile_img" />
-
-        <Button
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:src="@drawable/beard"
+            android:contentDescription="@string/logo" />
 
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp">
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/bookappointments"
-                android:contentDescription="@string/bookappointmentsimg" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="190dp"
-                android:text="@string/book_appointments"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp">
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:contentDescription="@string/viewappointmentsimg"
-                android:src="@drawable/viewappointments" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="190dp"
-                android:text="@string/view_appointments"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
 
      <RelativeLayout
          android:layout_width="match_parent"
@@ -138,6 +64,8 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/srbBtn"
+            android:onClick="srbBtn"
             android:layout_width="351dp"
             android:layout_height="80dp"
             android:layout_alignParentStart="true"
@@ -155,50 +83,9 @@
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="35dp"
-            android:contentDescription="@string/mapicon"
+            android:contentDescription="@string/salonrapidebranchicon"
             android:elevation="2dp"
-            android:src="@drawable/mapicon" />
-
-        <TextView
-
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="105dp"
-            android:elevation="2dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="@string/look_for_nearby_salons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="85dp">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="84dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:visibility="visible"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="35dp"
-            android:contentDescription="@string/notesicon"
-            android:elevation="2dp"
-            android:src="@drawable/notes"
-            tools:ignore="ImageContrastCheck" />
+            android:src="@drawable/srbicon" />
 
         <TextView
 
@@ -207,7 +94,49 @@
             android:layout_marginStart="105dp"
             android:layout_marginTop="30dp"
             android:elevation="2dp"
-            android:text="@string/add_notes"
+            android:text="@string/salon_rapide_branches"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/nsmBtn"
+            android:layout_width="351dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="nsmBtn"
+            android:visibility="visible"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:contentDescription="@string/mapicon"
+            android:elevation="2dp"
+            android:src="@drawable/mapicon" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="30dp"
+            android:elevation="2dp"
+            android:text="Discover through maps"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -219,6 +148,52 @@
         android:layout_height="85dp">
 
         <Button
+            android:id="@+id/anBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:onClick="anBtn"
+
+            android:visibility="visible"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:contentDescription="@string/notesicon"
+            android:elevation="2dp"
+            android:src="@drawable/notesicon"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="30dp"
+            android:elevation="2dp"
+            android:text="@string/view_your_notes"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <Button
+            android:id="@+id/shopBtn"
+
             android:layout_width="wrap_content"
             android:layout_height="84dp"
             android:layout_alignParentStart="true"
@@ -238,7 +213,7 @@
             android:layout_marginStart="35dp"
             android:contentDescription="@string/notesicon"
             android:elevation="2dp"
-            android:src="@drawable/shoppingcart"
+            android:src="@drawable/scicon"
             tools:ignore="ImageContrastCheck" />
 
         <TextView
@@ -249,6 +224,49 @@
             android:layout_marginTop="30dp"
             android:elevation="2dp"
             android:text="@string/shop_for_items"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+
+        <Button
+            android:id="@+id/profileBtn"
+            android:onClick="profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="visible"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:contentDescription="@string/notesicon"
+            android:elevation="2dp"
+            android:src="@drawable/userprofile"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="105dp"
+            android:layout_marginTop="30dp"
+            android:elevation="2dp"
+            android:text="@string/view_your_profile"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />

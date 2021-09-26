@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_dark"
-    tools:context=".loginPage">
+    tools:context=".adminLogin">
 
     <ProgressBar
-        android:id="@+id/progressbarofloginpage"
+        android:id="@+id/progressbarofadminloginpage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/goToForgotPassword"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_to_continue"
+            android:text="@string/login_to_continue_as_admin"
             android:textSize="23sp"
             android:textColor="@color/baPrimaryDark">
         </TextView>
@@ -68,7 +68,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginEmail"
+            android:id="@+id/adminLoginEmail"
             android:hint="@string/enter_your_email_address"
             android:inputType="textEmailAddress">
         </EditText>
@@ -88,7 +88,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginPassword"
+            android:id="@+id/adminLoginPassword"
             android:hint="@string/enter_your_password"
             >
         </EditText>
@@ -96,7 +96,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <RelativeLayout
-        android:id="@+id/login"
+        android:id="@+id/adminLogin"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/password"
@@ -123,7 +123,7 @@
         android:id="@+id/goToForgotPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login"
+        android:layout_below="@id/adminLogin"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
@@ -134,14 +134,14 @@
     </TextView>
 
     <TextView
-        android:id="@+id/goToAdminLogin"
+        android:id="@+id/goToLoginPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/goToForgotPassword"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:text="@string/login_as_admin_instead"
+        android:text="@string/login_as_user_instead"
         android:textAlignment="center"
         android:textColor="@color/white">
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "512704694683",
+    "firebase_url": "https://salonrapide-default-rtdb.firebaseio.com",
+    "project_id": "salonrapide",
+    "storage_bucket": "salonrapide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512704694683:android:b5ea79435daa156b0cb93e",
+        "android_client_info": {
+          "package_name": "com.dev.salonrapide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512704694683-gvqvkt2hbc2kibm1doq744c6t8qk1k21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMS6lQowu1ModUicL4GUKK6Bn7lGE9ys4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512704694683-gvqvkt2hbc2kibm1doq744c6t8qk1k21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
