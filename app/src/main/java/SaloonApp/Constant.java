@@ -9,7 +9,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class Constant {
-	
+
+	// This is used to access as a sample database as reference only, and strictly for reference only
+
 	// API URL configuration
 	static String AdminPageURL = "http://www.dimasword.com/demo/ecommerce/";
 	static String CategoryAPI = "http://www.dimasword.com/demo/ecommerce/api/get-all-category-data.php";

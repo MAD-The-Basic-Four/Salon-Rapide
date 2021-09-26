@@ -16,8 +16,6 @@
 	<string name="add">Add this to my order</string>
 	<string name="share_btn">Share this</string>
 	<string name="share">Share</string>
-	<string name="contact">Contact Us</string>
-	<string name="callus">Call us</string>
     <string name="alert">Failed to connect internet!</string>
     <string name="not_found">Not Found!</string>
     <string name="number_order">Number of order : </string>
