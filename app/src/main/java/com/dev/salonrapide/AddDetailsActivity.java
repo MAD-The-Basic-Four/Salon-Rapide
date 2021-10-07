@@ -40,6 +40,7 @@ public class AddDetailsActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 insertData();//calls the insert method
                 clearAll();//clears all data
             }

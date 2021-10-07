@@ -65,7 +65,8 @@ public class createNotes extends AppCompatActivity {
                     mprogressbarofcreatenotes.setVisibility(View.VISIBLE);
 
                     //storing data on firestore
-                    DocumentReference documentReference = firebaseFirestore.collection("notes").document(firebaseUser.getUid()).collection("myNotes").document();
+                    DocumentReference documentReference = firebaseFirestore.collection("notes").
+                            document(firebaseUser.getUid()).collection("myNotes").document();
                     Map<String, Object> note = new HashMap<>();
                     note.put("title", title);
                     note.put("content", content);

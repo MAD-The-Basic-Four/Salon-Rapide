@@ -120,7 +120,8 @@ public class addNotes extends AppCompatActivity {
                         popupMenu.getMenu().add("Delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
-                                DocumentReference documentReference = firebaseFirestore.collection("notes").document(firebaseUser.getUid()).collection("myNotes").document(docId);
+                                DocumentReference documentReference = firebaseFirestore.collection("notes")
+                                        .document(firebaseUser.getUid()).collection("myNotes").document(docId);
                                 documentReference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {

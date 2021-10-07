@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class salonRapideBranches extends AppCompatActivity {
 
     RecyclerView recyclerView; //initialising recycler view
-    MainAdapter mainAdapter;
+    viewSalonRapideBranchesAdapter vSRBAdapter;
 
 
     @Override
@@ -36,20 +36,20 @@ public class salonRapideBranches extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Saloon"), MainModel.class)
                         .build();
 
-        mainAdapter = new MainAdapter(options);
-        recyclerView.setAdapter(mainAdapter);
+        vSRBAdapter = new viewSalonRapideBranchesAdapter(options);
+        recyclerView.setAdapter(vSRBAdapter );
 
     }
     @Override
     protected void onStart() {
         super.onStart();
-        mainAdapter.startListening();
+        vSRBAdapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mainAdapter.startListening();
+        vSRBAdapter.startListening();
     }
 
     @Override
@@ -84,8 +84,8 @@ public class salonRapideBranches extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Saloon").orderByChild("salon_name").startAt(str).endAt(str+"~"), MainModel.class)
                         .build();
 
-        mainAdapter = new MainAdapter(options);
-        mainAdapter.startListening();
-        recyclerView.setAdapter(mainAdapter);
+        vSRBAdapter = new viewSalonRapideBranchesAdapter(options);
+        vSRBAdapter.startListening();
+        recyclerView.setAdapter(vSRBAdapter);
     }
 }
