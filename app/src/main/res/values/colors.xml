@@ -15,6 +15,18 @@
     <color name="background_actionbar">#bb340e</color>
     <color name="detail_background">#372721</color>
     <color name="list_item_title">#fff</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="orange">#E15C2D</color>
+    <color name="homebg">#FFC107</color> //#f2e2b2
+    <color name="yellow">#e6de02</color>
+    <color name="blueprofcard">#FF000000</color>
+    <color name="baPrimary">#FFC107</color>
+    <color name="baPrimaryDark">#FFA000</color>
 
     <!-- background menu -->
     <color name="list_background">#ffffff</color>

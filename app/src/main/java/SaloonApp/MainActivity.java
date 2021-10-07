@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -29,9 +30,12 @@ import com.parse.Parse;
 import com.parse.ParseAnalytics;
 import com.parse.ParseInstallation;
 import com.parse.PushService;
+import com.solodroid.ecommerce.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static androidx.core.content.ContextCompat.startActivity;
 
 @SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity {
@@ -241,7 +245,7 @@ public class MainActivity extends FragmentActivity {
 		case R.id.rate_app:
 			try {
 				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-			} catch (android.content.ActivityNotFoundException anfe) {
+			} catch (ActivityNotFoundException anfe) {
 				startActivity(new Intent(Intent.ACTION_VIEW,
 						Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
 			}

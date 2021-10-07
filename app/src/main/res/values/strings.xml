@@ -1,6 +1,4 @@
 <resources>
-	<!-- App text configuration -->
-    <string name="app_name">Saloon App</string>
 
 	<!-- Parse push notification -->
 	<string name="parse_application_id">V0c7q2d6VCVuc0LXZmk3ZZbUjI4UMhIrgWmekZxP</string>
@@ -127,5 +125,98 @@
 		\n\nLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
 	</string>
     <string name="cart">Go to cart</string>
+	<string name="app_name">Salon Rapide</string>
+	<string name="beardIMG">BeardIMG</string>
+	<string name="salonRapideLogo">SalonRapideLogo</string>
+	<string name="signUp">Sign Up</string>
+	<string name="login">Login</string>
+	<string name="title_activity_login_page">loginPage</string>
+	<string name="emailAddress">Email Address</string>
+	<string name="password">Password</string>
+	<string name="lastName">Last Name</string>
+	<string name="firstName">First Name</string>
+	<string name="homebg">homeBG</string>
+	<string name="abdul_rahuman">Abdul Rahuman</string>
+	<string name="hello">Hello,</string>
+	<string name="book_appointments">Book Appointments</string>
+	<string name="view_appointments">View Appointments</string>
+	<string name="look_for_nearby_salons">Look for nearby salons</string>
+	<string name="add_notes">Add Notes</string>
+	<string name="bookappointmentsimg">bookAppointmentsImg</string>
+	<string name="viewappointmentsimg">viewAppointmentsImg</string>
+	<string name="discover_more">Discover.</string>
+	<string name="downarrowicon">downArrowIcon</string>
+	<string name="mapicon">mapIcon</string>
+	<string name="notesicon">notesIcon</string>
+	<string name="user">User</string>
+	<string name="profile">Profile</string>
+	<string name="your">Your</string>
+	<string name="user_profile_img">User Profile IMG</string>
+	<string name="full_name">Full Name</string>
+	<string name="abdul_rahuman_abdul_ali">Abdul Rahuman Abdul Ali</string>
+	<string name="ar5_gmail_com">ar5@gmail.com</string>
+	<string name="randomString">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</string>
+	<string name="_12345">12345</string>
+	<string name="update_profile">Update Profile</string>
+	<string name="return_back_to_home">Return back to home</string>
+	<string name="bio">Bio</string>
+	<string name="bookingCaps">BOOKING</string>
+	<string name="shop_for_items">Shop for items</string>
+	<string name="one">One</string>
+	<string name="salon2img">salon2img</string>
+	<string name="book_now">Book Now</string>
+	<string name="salons">Salons</string>
+	<string name="book_your_appointments">Book your appointments.</string>
+	<string name="salon_y">Salon Y</string>
+	<string name="salon3img">salon3img</string>
+	<string name="salon1img">salon1img</string>
+	<string name="salon_x">Salon X</string>
+	<string name="appointments">Appointments</string>
+	<string name="your_appointments_in_one_place">Your appointments, in one place.</string>
+	<string name="view">View</string>
+	<string name="discover">Discover</string>
+	<string name="discover_new_salons_around_town">Discover new Salons around town.</string>
+	<string name="mapsl">MapSL</string>
+	<string name="notes">Notes</string>
+	<string name="sticky_notes_only_non_stick">Sticky notes, only non-stick.</string>
+	<string name="create_new_note">Create New Note</string>
+	<string name="view_existing_notes">View existing notes</string>
+	<string name="delete_notes">Delete Notes</string>
+	<string name="view_notes">View Notes</string>
+	<string name="title_activity_maps">MapsActivity</string>
+	<string name="welcome_back">Welcome Back!</string>
+	<string name="management_options">Management Options:</string>
+	<string name="salonrapidebranchicon">salonRapideBranchIcon</string>
+	<string name="salon_rapide_management">Salon Rapide Management</string>
+	<string name="user_and_staff_management">User and Staff Management</string>
+	<string name="login_to_continue_as_admin">Login to Continue as Admin</string>
+	<string name="enter_your_email_address">Enter Your Email Address</string>
+	<string name="enter_your_password">Enter Your Password</string>
+	<string name="forgot_password">Forgot Password</string>
+	<string name="login_as_user_instead">Login As User Instead</string>
+	<string name="new_user_sign_up_now">New user? Sign Up now!</string>
+	<string name="enter_your_note_title_here">Enter your note title here</string>
+	<string name="enter_your_note_content_here">Enter your note content here</string>
+	<string name="forgot_your_password">Forgot Your Password?</string>
+	<string name="regain_access_to_your_account">Regain access to your account!</string>
+	<string name="enter_your_registered_email">Enter your registered email</string>
+	<string name="tap_here_to_recover">Tap here to recover</string>
+	<string name="go_back_to_login_screen">Go back to Login Screen</string>
+	<string name="hello_there">Hello There!</string>
+	<string name="logo">Logo</string>
+	<string name="salon_rapide_branches">Salon Rapide Branches</string>
+	<string name="view_your_notes">View Your Notes</string>
+	<string name="view_your_profile">View Your Profile</string>
+	<string name="login_to_continue">Login to Continue</string>
+	<string name="login_as_admin_instead">Login As Admin Instead</string>
+	<string name="sign_up">Sign Up</string>
+	<string name="title_displayed_here">Title Displayed here</string>
+	<string name="sign_up_here_it_s_completely_free">Sign Up here. It\'s completely free!</string>
+	<string name="existing_user_login_now">Existing user? Login Now!</string>
+	<string name="card1">Card1</string>
+	<string name="this_is_your_appearing_here">This is your appearing here</string>
+	<string name="add_new_salon">Add New Salon</string>
+	<string name="salon_name">Salon Name</string>
+	<string name="search_for_anything_salons_shops_etc">Search for anything! Salons, Shops etc...</string>
 
 </resources>
