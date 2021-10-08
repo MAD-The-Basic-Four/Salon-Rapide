@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class AddDetailsActivity extends AppCompatActivity {
 
-    EditText SalonName, Address, OwnerName, PhoneNo, Email, ImageUrl;
+    EditText SalonName, Address, OwnerName, PhoneNo, Email, ImageUrl, mSN;
     Button btnAdd, btnBack;
 
     @Override
@@ -56,8 +56,23 @@ public class AddDetailsActivity extends AppCompatActivity {
     //method to fetch details from all the fields in add details xml and store into a varibale
     //then set to map so the that value can be passed to firebase
     //this method should be called in btnAdd this allow the button the perform the Creation funcion
-    private void insertData()
-    {
+    private void insertData() {
+
+        String mSalonName = SalonName.getText().toString();
+        String mAddress = Address.getText().toString();
+        String mOwnerName = OwnerName.getText().toString();
+        String mEmail = Email.getText().toString();
+        String mPhoneNo = PhoneNo.getText().toString();
+        String chkEmail =  "[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+";
+
+        if (mSalonName.isEmpty() || mAddress.isEmpty() || mOwnerName.isEmpty() || mEmail.isEmpty() || mPhoneNo.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Fields are required!", Toast.LENGTH_SHORT).show();
+        }
+        else if(!mEmail.matches(chkEmail)){
+            Toast.makeText(getApplicationContext(), "Invalid Email format!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+
         //Map is created here and next the data from field will be sent to map
         Map<String, Object> map = new HashMap<>();
         //data from text field attached to map
@@ -84,6 +99,7 @@ public class AddDetailsActivity extends AppCompatActivity {
                         Toast.makeText(AddDetailsActivity.this, "Error while updating", Toast.LENGTH_SHORT).show();
                     }
                 });
+        }
     }
     //clears data in create field after entering values
     private void clearAll(){

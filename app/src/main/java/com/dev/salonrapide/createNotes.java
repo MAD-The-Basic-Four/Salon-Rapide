@@ -60,6 +60,9 @@ public class createNotes extends AppCompatActivity {
                 if(title.isEmpty()||content.isEmpty()){
                     Toast.makeText(getApplicationContext(),"Both fields are required!",Toast.LENGTH_SHORT).show();
                 }
+                else if(title.length() > 20){
+                    Toast.makeText(getApplicationContext(),"Title characters are limited to 20 characters!",Toast.LENGTH_SHORT).show();
+                }
                 else{
 
                     mprogressbarofcreatenotes.setVisibility(View.VISIBLE);
